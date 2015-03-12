@@ -13,10 +13,9 @@ app.post('/', parser , function (req, res) {
 
 		var callback = function(data){
 			console.log(data);
-			res.status(200).send('' + data);
+			res.status(200).send(code +'\n-> ' + data);
 		};
 		var code = req.body.text;
-		console.log(code);
 
 		(new Function("log", code))(callback); // Perform the call
 
