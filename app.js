@@ -10,8 +10,15 @@ app.get('/', function (req, res) {
 
 app.post('/', parser , function (req, res) {
 	if(req.body.token === token){
-		console.log(req.body);
-		res.send('ok');
+		//console.log(req.body);
+		//res.send('ok');
+		
+		var callback = function(data){ res.send(data); };
+		var code = req.body;
+
+		(new Function("log", code))(callback); // Perform the call
+		
+		// Need <code> encoding and format check, callback malformed data check, and timeout if log() is never called
 	} else {
 		res.status(404).send('Bad token');
 	}
