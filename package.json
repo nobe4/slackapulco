@@ -2,6 +2,9 @@
   "name": "slackapulco",
   "version": "1.0.0",
   "description": "/js 1+1",
+  "engines": {
+	      "node": "0.12.0"
+  },
   "scripts": {
 	  "start" : "node app.js",
 	  "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +14,10 @@
     "url": "https://github.com/nobe4/slackapulco.git"
   },
   "keywords": [
-    "slack"
+    "slack",
+	"js"
   ],
-  "author": "nobe4",
+  "authors": [ "nobe4", "npny"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nobe4/slackapulco/issues"
